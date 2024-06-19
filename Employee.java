@@ -1,50 +1,47 @@
-package com.springBeanCollaboration;
+package com.demo;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
-
-@Configuration
 public class Employee {
-	private int employeeId;
-	private String employeeName;
-	private String employeeRole;
-	private double employeeSalary;
+
 	
-	private Department department;//bean
-	
-	@Bean("employee1")
-	public Employee getEmployee(){
-		return new Employee();
-	}
-
-	public void setEmployeeId(int employeeId) {
-		this.employeeId = employeeId;
-	}
-
-	public void setEmployeeName(String employeeName) {
-		this.employeeName = employeeName;
-	}
-
-	public void setEmployeeRole(String employeeRole) {
-		this.employeeRole = employeeRole;
-	}
-
-	public void setEmployeeSalary(double employeeSalary) {
-		this.employeeSalary = employeeSalary;
-	}
-
-	public void setDepartment(Department department) {
-		this.department = department;
-	}
-
+	private int id;
+	private String name;
+	private String address;
 	@Override
-	public String toString() 
-	{
-		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", employeeRole="
-				+ employeeRole + ", employeeSalary=" + employeeSalary + ", department=" + department + "]";
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", address=" + address + "]";
+	}
+	public Employee() {
+		//super();
+		this.id = id;
+		this.name = name;
+		this.address = address;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public Employee(int id, String name, String address) {
+		//super();
+		this.id = id;
+		this.name = name;
+		this.address = address;
 	}
 	
 	
-
 }
+
+
